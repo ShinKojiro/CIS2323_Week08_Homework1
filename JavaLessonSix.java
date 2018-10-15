@@ -5,18 +5,29 @@ public class JavaLessonSix{
 
     static Scanner userInput = new Scanner(System.in);
     public static void main(String[] args){
+        //part 1
         // divideByZero(2);
 
+        //part 2
         // System.out.print("How old are you?");
         // int age = checkValidAge();
         // if (age !=0){
         //     System.out.println("You are " + age + " years old");
         // }
-
-        getAFile("./somestuff.txt");
+        
+        //part 3
+        // getAFile("./somestuff.txt");
+        
+        //part 4
+        try {
+            getAFile("./somestuff.txt");
+        } catch (IOException e) {
+            //TODO: handle exception
+            System.out.println("An IO Error Occured");
+        }
     }
 
-    
+    //part 1
     // public static void divideByZero(int a){
     //     try {
     //          System.out.println(a/0);
@@ -27,7 +38,8 @@ public class JavaLessonSix{
     //         e.printStackTrace();
     //     }
     //}
-
+    
+    //part 2
     // public static int checkValidAge(){
     //     try {
     //         return userInput.nextInt();
@@ -37,7 +49,8 @@ public class JavaLessonSix{
     //         return 0;
     //     }
     // }
-
+    
+    //part 3
     // public static void getAFile(String fileName){
     //     try{
     //     FileInputStream file = new FileInputStream(fileName);
@@ -62,6 +75,8 @@ public class JavaLessonSix{
     //         System.out.println("");
     //     }
     // }
+
+    //part 4
     public static void getAFile(String fileName) throws IOException, FileNotFoundException{
         FileInputStream file = new FileInputStream(fileName);
     }
